@@ -1,16 +1,155 @@
-/* Override kecil di atas Bootstrap agar tetap konsisten dengan warna brand SIMPUS-Mini */
+/* ==========================================================================
+   1. GLOBAL & BODY
+   ========================================================================== */
+body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
-.navbar-brand,
+/* ==========================================================================
+   2. NAVBAR & NAVIGATION
+   ========================================================================== */
+.navbar-custom {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+}
+
 .nav-link {
-    color: #fff !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 0.8rem !important;
+    border-radius: 6px;
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #d9e8f5 !important;
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
 }
 
-form button[type="submit"]:hover,
-button[type="submit"]:hover {
-    background-color: #164869 !important;
+/* ==========================================================================
+   3. CARDS & STAT BOXES
+   ========================================================================== */
+.card {
+    border: none !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+}
+
+.card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stat-box {
+    border-radius: 12px;
+    background-color: #ffffff;
+    border-top: 4px solid #0284c7;
+    padding: 1.25rem;
+}
+
+.stat-box.blue { border-top-color: #2563eb; }
+.stat-box.green { border-top-color: #10b981; }
+.stat-box.amber { border-top-color: #f59e0b; }
+
+/* ==========================================================================
+   4. TABLES
+   ========================================================================== */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead tr {
+    background-color: #1e3a8a !important;
+    color: #ffffff !important;
+}
+
+.table thead th {
+    border: none;
+    padding: 12px 16px;
+    font-weight: 600;
+}
+
+.table tbody td {
+    padding: 12px 16px;
+    border-bottom-color: #e2e8f0;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f5f9 !important;
+}
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+.btn-primary-custom {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+.btn-sm {
+    border-radius: 6px !important;
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. FORMS
+   ========================================================================== */
+.form-control, 
+.form-select {
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1;
+    padding: 0.6rem 0.9rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* ==========================================================================
+   7. BADGES
+   ========================================================================== */
+.badge-available {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    padding: 0.35em 0.65em;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.badge-empty {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 0.35em 0.65em;
+    border-radius: 6px;
+    font-weight: 500;
 }
